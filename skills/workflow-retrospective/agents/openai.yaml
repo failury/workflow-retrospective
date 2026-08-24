@@ -1,0 +1,4 @@
+interface:
+  display_name: "Workflow Retrospective"
+  short_description: "Find reusable workflows in accessible history"
+  default_prompt: "Review my accessible conversation history for repeated workflows, report evidence-backed recommendations, and wait for approval before making changes."
