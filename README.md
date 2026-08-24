@@ -1,8 +1,8 @@
-# codex retrospec
+# Codex Retrospective
 
-`workflow-retrospective` is a Codex-native skill for auditing accessible conversation history or supplied artifacts for genuinely recurring workflows, then proposing the smallest reusable form: instructions, skills, project rules, scripts, templates, automations, or memory.
+`workflow-retrospective` is a Codex-native skill for finding recurring workflows, repeated mistakes, and avoidable friction in accessible conversation history or supplied artifacts. It proposes the smallest effective improvement: instructions, skills, project rules, scripts, templates, automations, or memory.
 
-It reads full raw turns when they are available, never substitutes chat previews or summaries for a transcript, reports its coverage boundary, and waits for approval before making persistent changes.
+It reads full raw turns when they are available, never substitutes chat previews or summaries for a transcript, reports its coverage boundary, and waits for approval before making persistent changes. For repeated errors, it identifies the trigger, failure mode, and a targeted prevention.
 
 ## Install
 

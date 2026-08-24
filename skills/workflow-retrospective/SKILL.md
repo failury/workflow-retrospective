@@ -1,11 +1,11 @@
 ---
 name: workflow-retrospective
-description: Audit accessible conversation history or supplied artifacts for genuinely recurring workflows, then propose the best reusable form with evidence. Use for retrospective, standardization, or "turn this repeated work into a skill/rule/template" requests; not for a one-off task review.
+description: Audit accessible conversation history or supplied artifacts for recurring workflows, repeated mistakes, and avoidable friction; then propose evidence-based improvements. Use for retrospective, standardization, or preventing repeated errors; not for a one-off task review.
 ---
 
 # Workflow Retrospective
 
-Find useful repetition without mistaking a recurring subject for a reusable process. The output is a decision-ready audit; it must not create, install, modify, or persist anything unless the user explicitly approves a specific proposal.
+Find useful repetition and prevent recurring mistakes without mistaking a recurring subject for a reusable process. The output is a decision-ready audit; it must not create, install, modify, or persist anything unless the user explicitly approves a specific proposal.
 
 ## Establish the evidence boundary
 
@@ -39,7 +39,7 @@ A thread is fully retrieved only when every available page has been read and the
 
 ## Deliver the audit before implementation
 
-For each recommendation, give the pattern, evidence and recurrence, why it is stable, proposed destination, expected benefit, risks or boundaries, overlap with existing assets, and a concise draft or outline when useful. Explicitly list near-misses that should remain ad hoc.
+For each recommendation, give the pattern, evidence and recurrence, why it is stable, proposed destination, expected benefit, risks or boundaries, overlap with existing assets, and a concise draft or outline when useful. For a repeated failure or friction pattern, state its trigger, failure mode, and the smallest prevention that would stop it from recurring. Explicitly list near-misses that should remain ad hoc.
 
 Clearly distinguish direct evidence from inferences and rank recommendations by confidence and expected value. End by requesting approval for specific implementations; do not silently act on general interest in standardization.
 
