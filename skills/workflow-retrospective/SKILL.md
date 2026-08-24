@@ -1,6 +1,7 @@
 ---
 name: workflow-retrospective
 description: Audit accessible conversation history or supplied artifacts for recurring workflows, repeated mistakes, and avoidable friction; then propose evidence-based improvements. Use for retrospective, standardization, or preventing repeated errors; not for a one-off task review.
+license: MIT
 ---
 
 # Workflow Retrospective
