@@ -16,4 +16,4 @@ npx skills add failury/codex-retrospec
 
 ## Status
 
-The skill is tested locally. A license has not yet been selected for this repository.
+The skill is tested locally and released under the [MIT License](LICENSE).
