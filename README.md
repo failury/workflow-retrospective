@@ -1,4 +1,4 @@
-# Agent Retrospective
+# Workflow Retrospective
 
 `workflow-retrospective` is a Codex and Claude Code skill for finding recurring workflows, repeated mistakes, and avoidable friction in accessible conversation history or supplied artifacts. It proposes the smallest effective improvement: instructions, skills, project rules, scripts, templates, automations, or memory.
 
@@ -7,14 +7,14 @@ It reads full raw turns when they are available, never substitutes chat previews
 ## Install
 
 ```bash
-npx skills add failury/codex-retrospec
+npx skills add failury/workflow-retrospective
 ```
 
 To target a specific agent:
 
 ```bash
-npx skills add failury/codex-retrospec --agent codex
-npx skills add failury/codex-retrospec --agent claude-code
+npx skills add failury/workflow-retrospective --agent codex
+npx skills add failury/workflow-retrospective --agent claude-code
 ```
 
 ## Included helper

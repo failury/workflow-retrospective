@@ -1,4 +1,4 @@
 interface:
-  display_name: "Agent Retrospective"
+  display_name: "Workflow Retrospective"
   short_description: "Find reusable workflows and prevent recurring errors"
   default_prompt: "Review my accessible conversation history for repeated workflows, mistakes, or friction; report evidence-backed recommendations and wait for approval before making changes."
