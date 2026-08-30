@@ -27,7 +27,7 @@ def conversations(payload):
     raise ValueError("expected a ChatGPT export array or a conversation object with mapping")
 
 
-def emit(conversation, include_system, output):
+def emit(conversation, exclude_system, output):
     mapping = conversation.get("mapping", {})
     if not isinstance(mapping, dict):
         return 0
@@ -38,11 +38,9 @@ def emit(conversation, include_system, output):
         message = node["message"]
         author = message.get("author") if isinstance(message.get("author"), dict) else {}
         role = author.get("role")
-        if not include_system and role == "system":
+        if exclude_system and role == "system":
             continue
         content = text_from_content(message.get("content"))
-        if not content:
-            continue
         rows.append((message.get("create_time") or 0, {
             "conversation_id": conversation.get("conversation_id") or conversation.get("id"),
             "title": conversation.get("title"),
@@ -52,6 +50,8 @@ def emit(conversation, include_system, output):
             "message_create_time": message.get("create_time"),
             "role": role,
             "content": content,
+            "raw_message": message,
+            "raw_node": node,
         }))
     for _, row in sorted(rows, key=lambda item: item[0]):
         output.write(json.dumps(row, ensure_ascii=False) + "\n")
@@ -62,7 +62,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("input", help="ChatGPT export JSON path, or - for stdin")
     parser.add_argument("--output", "-o", help="JSONL output path; default: stdout")
-    parser.add_argument("--include-system", action="store_true")
+    parser.add_argument("--exclude-system", action="store_true")
+    parser.add_argument("--include-system", action="store_true", help=argparse.SUPPRESS)
     args = parser.parse_args()
 
     source = sys.stdin if args.input == "-" else Path(args.input).open(encoding="utf-8")
@@ -73,7 +74,7 @@ def main():
             source.close()
     destination = sys.stdout if not args.output else Path(args.output).open("w", encoding="utf-8")
     try:
-        count = sum(emit(item, args.include_system, destination) for item in conversations(payload))
+        count = sum(emit(item, args.exclude_system, destination) for item in conversations(payload))
     finally:
         if destination is not sys.stdout:
             destination.close()

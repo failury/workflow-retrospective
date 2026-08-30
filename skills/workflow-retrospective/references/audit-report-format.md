@@ -4,19 +4,21 @@ Use this structure when a full retrospective is requested. Scale it down for a f
 
 ## Coverage
 
-- Sources reviewed
-- Raw-turn retrieval method, page count, turn count, and whether retrieval reached the final page
-- Date range and count, when knowable
+- Sources reviewed, with kind and workspace/repository scope
+- Files, bytes, raw records, independent root sessions, and date range, when knowable
+- Raw-turn retrieval method and whether every selected source reached its final page or EOF
+- Exclusion rules and counts, including injected instructions, skill definitions, approval transcripts, and fork/sidechain duplicates
+- Malformed, inaccessible, or explicitly truncated record count
 - Limitations and inaccessible sources
 
 ## Findings
 
 Use one compact entry per candidate:
 
-| Pattern | Evidence | Classification | Recommendation | Confidence |
+| Pattern | Evidence and independent roots | Scope | Classification | Recommendation | Confidence |
 |---|---|---|---|---|
 
-For recommendations, add a short paragraph covering the proposed destination, benefit, safety/authority boundary, overlap check, and a draft outline if approval would make implementation straightforward.
+For recommendations, add a short paragraph covering independent recurrence, impact if repeated, the proposed destination, scope, benefit, safety/authority boundary, overlap check, and a draft outline if approval would make implementation straightforward.
 
 ## Do not standardize
 

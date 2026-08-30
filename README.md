@@ -22,6 +22,7 @@ npx skills add failury/workflow-retrospective --agent claude-code
 The helpers use only the Python standard library:
 
 - `scripts/normalize_chatgpt_export.py` converts ChatGPT export JSON into raw-message JSONL.
+- `scripts/normalize_codex_export.py` converts Codex rollout JSONL files or session directories into a complete normalized raw-record stream.
 - `scripts/normalize_claude_code_export.py` converts a Claude Code transcript JSONL file or project transcript directory into a complete normalized raw-record stream, retaining tool-use and tool-result records.
 
 ## Status
