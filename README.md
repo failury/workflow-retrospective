@@ -1,4 +1,4 @@
-# Codex Retrospective
+# Agent Retrospective
 
 `workflow-retrospective` is a Codex and Claude Code skill for finding recurring workflows, repeated mistakes, and avoidable friction in accessible conversation history or supplied artifacts. It proposes the smallest effective improvement: instructions, skills, project rules, scripts, templates, automations, or memory.
 
