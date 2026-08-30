@@ -46,7 +46,18 @@ A thread is fully retrieved only when every available page has been read and the
 
 ## Deliver the audit before implementation
 
-For each recommendation, give the pattern, evidence and recurrence, why it is stable, proposed destination, expected benefit, risks or boundaries, overlap with existing assets, and a concise draft or outline when useful. For a repeated failure or friction pattern, state its trigger, failure mode, and the smallest prevention that would stop it from recurring. Explicitly list near-misses that should remain ad hoc.
+For each recommendation, give the pattern, evidence and recurrence, why it is stable, proposed destination, expected benefit, risks or boundaries, and overlap with existing assets. For a repeated failure or friction pattern, state its trigger, failure mode, and the smallest prevention that would stop it from recurring. Explicitly list near-misses that should remain ad hoc.
+
+## Show proposed changes before asking for approval
+
+For every item that could persist a change, present a reviewable proposal before requesting approval. Name whether it will create or update an artifact and its exact target path or skill name.
+
+- For an `AGENTS.md` update, read the target file first and show the exact added, changed, or removed text as a unified diff. If it does not exist, say that it will be created and show the complete initial file content.
+- For a new skill, state the skill name, destination directory, and every file to create. Show the complete proposed `SKILL.md`, including frontmatter, and the contents of any supporting file that would be added.
+- For an existing skill, identify the existing skill by name and path, then show a unified diff for each file to change. Do not describe an update only at a high level.
+- For another destination, show the exact artifact, operation, and content or configuration change with enough context to apply it unambiguously.
+
+Group independently approvable proposals, but do not treat a general interest in standardization as approval. After approval, implement only the exact approved proposal. If implementation reveals a material change from the preview, stop and request renewed approval.
 
 Clearly distinguish direct evidence from inferences and rank recommendations by confidence and expected value. End by requesting approval for specific implementations; do not silently act on general interest in standardization.
 
